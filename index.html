@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adda Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        .card:hover img {
+            filter: blur(4px);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card:hover .card-details {
+            opacity: 1;
+        }
+
+        body {
+            font-family: "Baloo Bhai 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .text-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; 
+        }
+
+        
+
+        .card {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover{
+            transform: translateY(-15px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s;
+        }
+
+        .card-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s, backdrop-filter 0.3s;
+            backdrop-filter: blur(0px);
+        }
+
+        .card a {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 4px;
+            z-index: 1;
+        }
+        .img_his{
+    max-width:26rem;
+    margin-right: 2rem;
+    border: rgba(255,255,255, 0.05) solid 20px;
+    backdrop-filter: blur(100px);
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+
+.enquiry-button {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    letter-spacing: 2px;
+    background-color: #333;
+    color: white;
+    padding: 10px 5px;
+    text-decoration: none;
+    border-left: 2px solid red;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+    </style>
+    
+</head>
+
+<body style="margin: 0; padding: 0px; background-image: url(./background2.png); background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
+    <header style=" position:sticky; z-index: 2; border-bottom: 2px solid white; top:0;background-image:url(./gif2.gif); background-repeat: no-repeat; background-size: cover; display: flex; justify-content:center; align-items: center;">
+        <nav style="display: flex; justify-content: space-between; align-items: center; width: 90%;">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="Logo.png" alt="Logo" style="height: 150px;">
+                <img src="Untitled_design-removebg-preview.png" alt="Adda Tech" style="height: 130px;">
+            </div>
+            <ul style="display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: larger;">
+                <li style="padding: 5px; margin: 5px; list-style: none;"><a class="button" style="color: white; text-decoration: none;" href="./index.html">Home</a></li>
+                <li style="padding: 5px; margin: 5px; list-style: none;"><a class="button" style="color: white; text-decoration: none;" href="./present.html">Next Gen Gadget</a></li>
+                <li style="padding: 5px; margin: 5px; list-style: none;"><a class="button" style="color: white; text-decoration: none;" href="./future.html">Future Tech Visions</a></li>
+                <li style="padding: 5px; margin: 5px; list-style: none;"><a class="button" style="color: white; text-decoration: none;" href="./tech.html">The Digital Revolution</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZL8Ug-Y-6m-OkdwWa9uYzhXk0S_IN8tuen1_MaWEbIQd2-w/viewform?usp=sf_link" target="_blank" class="enquiry-button">Feedback Form</a>
+    <div style="height: 78vh; width: 100%; position: relative;">
+        <div style="display: flex; overflow-x: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+            <video src="./tech1.mp4" autoplay loop muted style="flex:1 0 100%; height: 78vh; object-fit: cover;" id="slide-1">
+                <source src="./tech1.mp4" type="mp4/video">
+            </video>
+            <video src="./tech 2 (1).mp4" autoplay loop muted style="flex:1 0 100%; height: 78vh; object-fit: cover;" id="slide-2">
+                <source src="./tech 2 (1).mp4" type="mp4/video">
+            </video>
+            <img src="./tech 3.gif" alt="" style="flex:1 0 100%; object-fit: cover; height: 78vh;" id="slide-3">
+        </div>
+        <div style="display: flex; column-gap: 1rem; position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); z-index: 1;">
+            <a style="width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #fff; opacity: 0.75; transition: opacity ease 250ms; transition: all ease 0.5ms ;" href="#slide-1"></a>
+            <a style="width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #fff; opacity: 0.75; transition: opacity ease 250ms; transition: all ease 0.5ms ;" href="#slide-2"></a>
+            <a style="width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #fff; opacity: 0.75; transition: opacity ease 250ms; transition: all ease 0.5ms ;" href="#slide-3"></a>
+        </div>
+    </div>
+    <br><br><br>
+    <hr>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <p style="font-size: 20px; color: #fff; font-weight: 700;">Next Gen Gadgets for mordern life</p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="meta.jpg" alt="Card Image">
+            <a href="present.html">Smart Glasses</a>
+            <div class="card-details">
+                <p>Details about the card go here.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./galaxy.png" alt="Card Image 2">
+            <a href="present.html">Galaxy Ring</a>
+            <div class="card-details">
+                <p>Details about the card go here.</p>
+            </div>
+        </div>
+
+        <div class="card">
+          <img src="./vision.jpg" alt="Card Image 2">
+          <a href="present.html">Vision Pro</a>
+          <div class="card-details">
+              <p>Details about the card go here.</p>
+          </div>
+      </div>
+    </div>
+
+    <hr>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <p style="font-size: 20px; color: #fff; font-weight: 700;">Future Tech Vision</p>
+</div>
+    <div class="card-container">
+        <div class="card">
+            <img src="./5.-AVTR_interior.jpg" alt="Card Image">
+            <a href="present.html">AVTR</a>
+            <div class="card-details">
+                <p>Details about the card go here.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./transparent tv.avif" alt="Card Image 2">
+            <a href="present.html">Transparent TV</a>
+            <div class="card-details">
+                <p>Details about the card go here.</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+          <img src="./vivobook-pro-16-3d-oled-780x486.jpg" alt="Card Image 2">
+          <a href="present.html">3D laptop</a>
+          <div class="card-details">
+              <p>Details about the card go here.</p>
+          </div>
+      </div>
+    </div>
+        </div>
+         <hr>
+        <div style="display: flex; justify-content: center; align-items: center;">
+        <p style="font-size: 20px; color: #fff; font-weight: 700;">The Digital Revolution</p>
+            </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="./5dhff.jfif" alt="Card Image">
+                <a href="present.html">5G Network</a>
+                <div class="card-details">
+                    <p>Details about the card go here.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="./iot.jpg" alt="Card Image 2">
+                <a href="present.html">Internet OF Things(IOT)</a>
+                <div class="card-details">
+                    <p>Details about the card go here.</p>
+                </div>
+            </div>
+    
+    
+            <div class="card">
+              <img src="./ai.jpg" alt="Card Image 2">
+              <a href="present.html">Artificial Intelligence(AI)</a>
+              <div class="card-details">
+                  <p>Details about the card go here.</p>
+              </div>
+          </div>
+        </div>
+            </div>
+      
+      </body>
+        </html>
